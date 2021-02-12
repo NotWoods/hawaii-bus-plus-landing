@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h4 {
+  @apply font-display font-medium text-3xl;
+}
