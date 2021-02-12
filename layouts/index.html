@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <div class="text-gray-50 bg-blue-700 px-4 shadow-lg" style="background-image: url('/waves.svg')">
+    {{ partial "header.html" . }}
+    <div class="relative max-w-5xl mx-auto mt-20 pb-16 pr-8 flex">
+      <section class="mr-96">
+        {{ .Content }}
+      </section>
+      <picture class="absolute right-0 -top-8">
+        <source srcset="/phones_dark.png"
+                media="(prefers-color-scheme: dark)">
+        <img width="384" height="482" class="w-96" src="/phones_light.png" alt="Screenshot showing map and route timetable" />
+      </picture>
+    </div>
+  </div>
+{{ end }}

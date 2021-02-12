@@ -1,0 +1,11 @@
+{
+  "name": "@hawaii-bus-plus/landing",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.6",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.3"
+  }
+}
