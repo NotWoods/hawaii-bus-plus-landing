@@ -1,8 +1,27 @@
-baseURL: "http://example.org/"
+baseURL: "https://hawaiibusplus.com/"
 languageCode: "en-us"
-title: "My New Hugo Site"
+title: "Hawaii Bus Plus"
 
 markup:
   goldmark:
     renderer:
       unsafe: true
+
+outputs:
+  home: [HTML]
+  page: [HTML]
+  section: [HTML]
+
+disableKinds:
+  - taxonomy
+  - term
+
+minify:
+  minifyOutput: true
+  tdewolff:
+    html:
+      keepConditionalComments: false
+      keepDefaultAttrVals: false
+      keepDocumentTags: false
+      keepEndTags: false
+      keepWhitespace: false

@@ -7,8 +7,13 @@
   <title>Hawaii Bus Plus</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@500&display=swap" rel="stylesheet" />
-  {{ $style := resources.Get "css/main.css" | resources.PostCSS }}
+  {{ $style := resources.Get "css/main.css" | resources.PostCSS | resources.Minify }}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet" />
+  <script src="https://getinsights.io/js/insights.js"></script>
+  <script>
+  insights.init('KXNUdTJ9I4iYXHGo');
+  insights.trackPages();
+  </script>
 </head>
 <body class="bg-gray-50 dark:bg-gray-750">
   {{ block "main" . }}{{ end }}

@@ -1,9 +1,17 @@
-<form class="flex flex-col md:flex-row mt-5 gap-2">
+<form
+  action="https://buttondown.email/api/emails/embed-subscribe/hawaiibusplus"
+  method="post"
+  target="popupwindow"
+  onsubmit="window.open('https://buttondown.email/hawaiibusplus', 'popupwindow')"
+  class="embeddable-buttondown-form flex flex-col md:flex-row mt-5 gap-2">
   <input
     class="flex-1 text-black"
     type="email"
+    name="email"
     required
+    aria-label="Enter your email"
     placeholder="Your email address" />
+  <input type="hidden" value="1" name="embed" />
   <button type="submit" class="font-medium shadow transition-colors px-4 py-3 bg-blue-400 hover:bg-blue-500 focus:ring-cyan text-white">
     Sign up for early access
   </button>
