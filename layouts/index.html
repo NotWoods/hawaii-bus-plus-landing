@@ -2,14 +2,35 @@
   <div class="text-gray-50 bg-blue-700 px-4 shadow-lg" style="background-image: url('/waves.svg')">
     {{ partial "header.html" . }}
     <div class="relative max-w-5xl mx-auto mt-20 pb-16 pr-8 flex">
-      <section class="mr-96">
-        {{ .Content }}
+      <section class="md:mr-80 lg:mr-96">
+        <h2 class="font-display font-medium text-4xl md:text-5xl">
+          Riding the bus shouldn't be a hassle.
+        </h2>
+        <p class="font-medium text-xl md:text-2xl mt-3">
+          Make it positive with the best transit app on the <span class="inline-block">Big Island.</span>
+        </p>
+
+        <form class="flex mt-5 gap-2">
+          <input
+            class="flex-1 text-black"
+            type="email"
+            placeholder="Your email address" />
+          <button type="submit" class="font-medium shadow transition-colors px-4 py-3 bg-blue-400 hover:bg-blue-500 focus:ring-cya">
+            Sign up for early access
+          </button>
+        </form>
       </section>
-      <picture class="absolute right-0 -top-8">
+      <picture class="hidden md:block absolute right-0 -top-8">
         <source srcset="/phones_dark.png"
                 media="(prefers-color-scheme: dark)">
-        <img width="384" height="482" class="w-96" src="/phones_light.png" alt="Screenshot showing map and route timetable" />
+        <img width="384" height="482" class="w-80 lg:w-96" src="/phones_light.png" alt="Screenshot showing map and route timetable" />
       </picture>
     </div>
   </div>
+
+  <section class="max-w-5xl mx-auto mt-8">
+    <div class="prose">
+      {{ .Content }}
+    </div>
+  </section>
 {{ end }}
