@@ -10,7 +10,7 @@
   {{ $style := resources.Get "css/main.css" | resources.PostCSS }}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet" />
 </head>
-<body>
+<body class="bg-gray-50 dark:bg-gray-750">
   {{ block "main" . }}{{ end }}
 </body>
 </html>

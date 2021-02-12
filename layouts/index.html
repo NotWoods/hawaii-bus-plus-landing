@@ -4,29 +4,45 @@
     <div class="relative max-w-5xl mx-auto mt-20 pb-16 pr-8 flex">
       <section class="md:mr-80 lg:mr-96">
         {{ .Content }}
+        {{ partial "signup.html" . }}
       </section>
-      <picture class="hidden md:block absolute right-0 -top-20">
-        <source srcset="/phones_dark.png"
-                media="(prefers-color-scheme: dark)">
-        <img width="384" height="482" class="w-80 lg:w-96" src="/phones_light.png" alt="Screenshot showing map and route timetable" />
+      <picture class="phones--hero hidden md:block absolute right-0 -top-20">
+        {{ partial "phones.html" . }}
       </picture>
     </div>
   </div>
 
-  {{ $headless := .Site.GetPage "/features" }}
-  {{ range $index, $page := $headless.Pages }}
-    <section class="max-w-5xl mx-auto mt-8 lg:mt-20 px-4 text-lg text-gray-700">
-      {{ if (modBool $index 2) }}
-        {{ $page.Content }}
+  <section class="max-w-5xl mx-auto mt-8 lg:mt-32 px-4 text-gray-700 dark:text-gray-300">
+    {{ $headless := .Site.GetPage "/features" }}
+    <div class="lg:text-center">
+      {{ $headless.Content }}
+    </div>
+    <dl class="space-y-10 mt-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+      {{ range $index, $page := $headless.Pages }}
+        <div class="flex">
+          <div class="flex-shrink-0 h-12 w-12 p-3 bg-blue-500 text-white shadow">
+            {{ $page.Content }}
+          </div>
+          <div class="ml-4">
+            <dt class="text-lg leading-6 font-bold text-gray-900 dark:text-white">{{ $page.Title }}</dt>
+            <dt class="mt-2">{{ $page.Summary }}</dt>
+          </div>
+        </div>
       {{ end }}
-      <picture class="">
-        <source srcset="{{ $page.Params.dark }}"
-                media="(prefers-color-scheme: dark)">
-        <img src="{{ $page.Params.img.light }}" alt="{{ $page.Params.img.alt }}" />
-      </picture>
-      {{ if not (modBool $index 2) }}
-        {{ $page.Content }}
-      {{ end }}
-    </section>
-  {{ end }}
+    </dl>
+  </section>
+
+  <div class="px-4 text-center mt-10">
+    <picture class="phones--footer inline-block md:hidden">
+      {{ partial "phones.html" . }}
+    </picture>
+  </div>
+
+  <footer class="text-center mt-10 md:mb-20 max-w-3xl mx-auto">
+    <div class="shadow-lg px-16 pt-12 pb-20 md:pb-12 bg-white dark:bg-gray-700">
+      <h3 class="text-black dark:text-white">Get notified when we're launching.</h3>
+      <p class="text-gray-700 dark:text-gray-300 text-xl mt-4">Be the first to try out Hawaii Bus Plus.</p>
+      {{ partial "signup.html" . }}
+    </div>
+  </footer>
 {{ end }}

@@ -1,0 +1,14 @@
+{{ $light := .Resources.GetMatch "phones_light.png" }}
+{{ $light80 := $light.Resize "320x" }}
+{{ $light96 := $light.Resize "384x" }}
+{{ $dark := .Resources.GetMatch "phones_dark.png" }}
+{{ $dark80 := $dark.Resize "320x" }}
+{{ $dark96 := $dark.Resize "384x" }}
+<source srcset="{{ $dark80.RelPermalink }} w320, {{ $dark96.RelPermalink }} w384, {{ $dark.RelPermalink }} w{{$dark.Width}}"
+        media="(prefers-color-scheme: dark)">
+<img
+  width="{{$light.Width}}" height="{{$light.Height}}"
+  class="phones__img"
+  srcset="{{ $light80.RelPermalink }} w320, {{ $light96.RelPermalink }} w384, {{ $light.RelPermalink }} w{{$light.Width}}"
+  src="{{ $light.RelPermalink }}"
+  alt="Screenshot showing map and route timetable" />
