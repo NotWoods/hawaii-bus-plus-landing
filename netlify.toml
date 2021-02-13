@@ -1,0 +1,11 @@
+[build]
+publish = "public"
+command = "npm ci && hugo"
+
+[build.environment]
+HUGO_VERSION = "0.80.0"
+HUGO_ENABLEGITINFO = "true"
+NODE_VERSION = "14.15.5"
+
+[context.production.environment]
+HUGO_ENVIRONMENT = "production"
