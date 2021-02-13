@@ -14,6 +14,8 @@
   insights.init('KXNUdTJ9I4iYXHGo');
   insights.trackPages();
   </script>
+  {{ partial "seo/twitter.html" . }}
+  {{ partial "seo/opengraph.html" . }}
 </head>
 <body class="bg-gray-50 dark:bg-gray-750">
   {{ block "main" . }}{{ end }}
