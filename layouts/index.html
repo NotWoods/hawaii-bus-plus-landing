@@ -18,7 +18,7 @@
       {{ $headless.Content }}
     </div>
     <dl class="space-y-10 mt-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-      {{ range $index, $page := $headless.Pages }}
+      {{ range $index, $page := sort $headless.Pages ".Title" "desc" }}
         <div class="flex">
           <div class="flex-shrink-0 h-12 w-12 p-3 bg-blue-500 text-white shadow">
             {{ $page.Content }}
