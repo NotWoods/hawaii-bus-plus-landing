@@ -1,4 +1,5 @@
 ---
+title: Hawaii Bus Plus
 ---
 
 <h2 class="font-display font-medium text-4xl md:text-5xl">
