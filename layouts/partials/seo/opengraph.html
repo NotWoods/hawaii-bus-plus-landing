@@ -3,5 +3,5 @@
 <meta name="og:url" content="{{ .Permalink }}" />
 <meta name="og:description" content="{{- with .Description -}}{{ . }}{{ else }}{{- if .IsPage -}}{{ .Summary }}{{- else -}}{{- with .Site.Params.description -}}{{ . }}{{- end -}}{{- end -}}{{- end -}}" />
 <meta name="og:site_name" content="{{ .Page.Title }}" />
-<meta name="og:image" content="https://hawaiibusplus.com/social.png" />
+<meta name="og:image" content='{{ "/social.png" | absURL }}' />
 <meta name="og:image:alt" content="Riding the bus shouldn't be a hassle. Make it positive with the best transit app on the Big Island." />
