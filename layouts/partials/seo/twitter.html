@@ -2,5 +2,5 @@
 <meta name="twitter:title" content="{{ .Title }}" />
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content='{{ "/social.png" | absURL }}' />
-<meta name="twitter:image:alt" content="Riding the bus shouldn't be a hassle. Make it positive with the best transit app on the Big Island." />
+<meta name="twitter:image" content='{{ .Params.social_image.src | absURL }}' />
+<meta name="twitter:image:alt" content="{{ .Params.social_image.alt }}" />

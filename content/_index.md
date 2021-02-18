@@ -1,5 +1,8 @@
 ---
 title: Hawaii Bus Plus
+social_image:
+  src: /social.png
+  alt: Riding the bus shouldn't be a hassle. Make it positive with the best transit app on the Big Island.
 ---
 
 <h2 class="font-display font-medium text-4xl md:text-5xl">
