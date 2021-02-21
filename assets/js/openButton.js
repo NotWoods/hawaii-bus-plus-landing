@@ -1,10 +1,10 @@
 function documentReady() {
-  if (document.readyState === "interactive") {
+  if (document.readyState !== "loading") {
     return Promise.resolve();
   } else {
     return new Promise((resolve) => {
       function handleChange() {
-        if (document.readyState === "interactive") {
+        if (document.readyState !== "loading") {
           resolve();
           document.removeEventListener("readystatechange", handleChange);
         }
