@@ -12,8 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@500&display=swap" rel="stylesheet" />
   {{ $style := resources.Get "css/main.css" | resources.PostCSS | resources.Minify }}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet" />
-  {{ $buttonScript := resources.Get "js/openButton.js" | js.Build (dict "minify" true) }}
-  <script src="{{ $buttonScript.RelPermalink }}" async></script>
   <script src="https://getinsights.io/js/insights.js"></script>
   <script>
   insights.init('KXNUdTJ9I4iYXHGo');

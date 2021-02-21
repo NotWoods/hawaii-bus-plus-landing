@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <div class="text-gray-50 bg-blue-700 px-4 shadow-lg bg-96" style="background-image: url('/waves.svg')">
+    <header class="flex mx-auto pt-6 max-w-5xl items-center">
+      {{ partial "title.html" . }}
+    </header>
+    <h1 class="text-center font-display font-medium text-5xl py-8">Privacy Policy</h1>
+  </div>
+
+  <article class="max-w-5xl mx-auto mt-8 px-4 text-gray-700 dark:text-gray-300 prose dark:prose-light mb-16">
+    {{ .Content }}
+    <p>
+      This Privacy Policy was last updated on
+      <time datetime='{{ .Lastmod.Format "2006-02-01" }}'>{{ .Lastmod.Format "January 2, 2006" }}</time>.
+    </p>
+  </section>
+{{ end }}
