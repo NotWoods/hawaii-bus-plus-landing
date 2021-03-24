@@ -1,5 +1,5 @@
 ---
-title: Hawaii Bus Plus - Privacy Policy
+title: Privacy Policy
 layout: privacy
 ---
 
