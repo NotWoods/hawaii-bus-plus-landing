@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-h3 {
-  @apply font-display font-medium text-3xl leading-8;
+@layer components {
+  .waves {
+    @apply bg-blue-700;
+    background-size: theme('spacing.96');
+    background-image: url('/waves.svg');
+  }
 }
 
 .phones--hero .phones__img {

@@ -2,7 +2,7 @@
 <title>{{ .Site.Title }} - {{ .Title }}</title>
 {{ end }}
 {{ define "main" }}
-  <div class="text-gray-50 bg-blue-700 px-4 shadow-lg bg-96" style="background-image: url('/waves.svg')">
+  <div class="text-gray-50 px-4 shadow-lg waves">
     <header class="flex mx-auto pt-6 max-w-5xl items-center">
       {{ partial "title.html" . }}
     </header>
@@ -17,3 +17,4 @@
     </p>
   </section>
 {{ end }}
+{{ define "footer" }}<!--empty-->{{ end }}

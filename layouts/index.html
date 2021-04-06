@@ -1,5 +1,8 @@
+{{ define "title" }}
+<title>{{ .Title }}</title>
+{{ end }}
 {{ define "main" }}
-  <div class="text-gray-50 bg-blue-700 px-4 shadow-lg bg-96" style="background-image: url('/waves.svg')">
+  <div class="text-gray-50 px-4 shadow-lg waves">
     {{ partial "header.html" . }}
     <div class="relative max-w-5xl mx-auto mt-20 pb-16 pr-8 flex">
       <section class="md:mr-80 lg:mr-96">
@@ -38,13 +41,13 @@
     </picture>
   </div>
 
-  <aside class="text-center mt-10 md:mb-20 max-w-5xl mx-auto">
-    <div class="shadow-lg px-16 pt-12 pb-20 md:pb-12 bg-white dark:bg-gray-700">
-      <h3 class="text-black dark:text-white">Get notified when we're launching.</h3>
-      <p class="text-gray-700 dark:text-gray-300 text-xl mt-4">Be the first to try out Hawaii Bus Plus.</p>
-      {{ partial "signup.html" . }}
-    </div>
-  </aside>
+  <section class="px-4">
+    {{ $pricing := .Site.GetPage "/pricing" }}
+    <h3 class="font-display font-medium text-3xl leading-8 text-center">
+      <a href="{{ $pricing.RelPermalink }}">{{ $pricing.Params.subtitle | safeHTML }}</a>
+    </h3>
+    {{ partialCached "pricing.html" . }}
+  </section>
 
-  {{ partial "footer.html" . }}
+  <hr class="max-w-5xl mx-auto">
 {{ end }}
