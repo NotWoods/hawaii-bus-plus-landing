@@ -40,16 +40,24 @@
       {{ end }}
     </dl>
   </section>
-
   <div class="px-4 text-center mt-10">
     <picture class="phones--footer inline-block md:hidden">
       {{ partial "phones.html" . }}
     </picture>
   </div>
 
+  <div class="px-4 text-center mt-10">
+    <h3 class="font-display font-medium text-3xl leading-8 text-center mt-16">
+      Ready for phones, tablets, laptops, and more.
+    </h3>
+    <picture class="inline-block mt-4">
+      {{ partial "picture.html" (dict "alt" "Screenshot of tablet interface" "light" "tablet_schedule_light_frame.png" "dark" "tablet_schedule_dark_frame.png" "resources" .Resources "width" 1024) }}
+    </picture>
+  </div>
+
   <section class="px-4">
     {{ $pricing := .Site.GetPage "/pricing" }}
-    <h3 class="font-display font-medium text-3xl leading-8 text-center">
+    <h3 class="font-display font-medium text-3xl leading-8 text-center mt-16">
       <a href="{{ $pricing.RelPermalink }}">{{ $pricing.Params.subtitle | safeHTML }}</a>
     </h3>
     {{ partialCached "pricing.html" . }}

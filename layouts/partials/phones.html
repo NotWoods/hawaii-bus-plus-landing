@@ -1,14 +1,1 @@
-{{ $light := .Resources.GetMatch "phones_light.png" }}
-{{ $light1x := $light.Resize "384x" }}
-{{ $light2x := $light.Resize "768x" }}
-{{ $dark := .Resources.GetMatch "phones_dark.png" }}
-{{ $dark1x := $dark.Resize "384x" }}
-{{ $dark2x := $dark.Resize "768x" }}
-<source srcset="{{ $dark1x.RelPermalink }}, {{ $dark2x.RelPermalink }} 2x"
-        media="(prefers-color-scheme: dark)">
-<img
-  width="384" height="483"
-  class="phones__img"
-  srcset="{{ $light1x.RelPermalink }}, {{ $light2x.RelPermalink }} 2x"
-  src="{{ $light.RelPermalink }}"
-  alt="Screenshot showing map and route timetable" />
+{{ partial "picture.html" (dict "alt" "Screenshot showing map and route timetable" "light" "phones_light.png" "dark" "phones_dark.png" "resources" .Resources "width" 384) }}

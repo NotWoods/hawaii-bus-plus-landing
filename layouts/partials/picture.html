@@ -1,0 +1,15 @@
+{{- $width := printf "%dx" .width }}
+{{- $double := printf "%dx" (mul .width 2) }}
+{{- $light := .resources.GetMatch .light }}
+{{- $light1x := $light.Resize $width }}
+{{- $light2x := $light.Resize $double }}
+{{- $dark := .resources.GetMatch .dark }}
+{{- $dark1x := $dark.Resize $width }}
+{{- $dark2x := $dark.Resize $double }}
+<source srcset="{{ $dark1x.RelPermalink }}, {{ $dark2x.RelPermalink }} 2x"
+        media="(prefers-color-scheme: dark)">
+<img
+  width="{{ $light1x.Width }}" height="{{ $light1x.Height }}"
+  srcset="{{ $light1x.RelPermalink }}, {{ $light2x.RelPermalink }} 2x"
+  src="{{ $light.RelPermalink }}"
+  alt="{{ .alt }}" />
