@@ -40,17 +40,15 @@
       {{ end }}
     </dl>
   </section>
+
   <div class="px-4 text-center mt-10">
+    <h3 class="font-display font-medium text-3xl leading-8 text-center mt-16 mb-4">
+      Ready for phones, tablets, laptops, and more.
+    </h3>
     <picture class="phones--footer inline-block md:hidden">
       {{ partial "phones.html" . }}
     </picture>
-  </div>
-
-  <div class="px-4 text-center mt-10">
-    <h3 class="font-display font-medium text-3xl leading-8 text-center mt-16">
-      Ready for phones, tablets, laptops, and more.
-    </h3>
-    <picture class="inline-block mt-4">
+    <picture class="inline-block">
       {{ partial "picture.html" (dict "alt" "Screenshot of tablet interface" "light" "tablet_schedule_light_frame.png" "dark" "tablet_schedule_dark_frame.png" "resources" .Resources "width" 1024) }}
     </picture>
   </div>

@@ -4,6 +4,7 @@ menu:
   - title: Product
     items:
       Pricing: /pricing/
+      Press Kit: /PressKit.zip
       Privacy Policy: /privacy/
       Terms of Service: /terms-of-service/
   - title: Company
