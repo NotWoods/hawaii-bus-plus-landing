@@ -1,1 +1,1 @@
-{{ partial "picture.html" (dict "alt" "Screenshot showing map and route timetable" "light" "phones_light.png" "dark" "phones_dark.png" "resources" .Resources "width" 384) }}
+{{ partial "picture.html" (dict "alt" "Screenshot showing map and route timetable" "light" (resources.Get "img/phones_light.png") "dark" (resources.Get "img/phones_dark.png") "width" 384) }}
