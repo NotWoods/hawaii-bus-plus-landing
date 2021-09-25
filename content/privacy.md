@@ -65,7 +65,7 @@ We also disclose anonymous and aggregate information to certain third parties fo
 While using Hawaii Bus Plus, we may be using third party software and/or service for various needs, inter alia, in order to collect and/or process the information detailed herein (the "Third Party Service Provider"). These third party services include the usage of Software Development Kits (“SDKs”) from the following companies and for the following purposes:
 
 - Google Maps SDK, which is used to show an interactive map and street view.
-- Get Insights SDK, which is used for product analysis.
+- Fathom Analytics, which is used for product analysis.
 - Stripe SDK, which is used for payment processing.
 - Netlify Identity SDK, which is used to store your user account.
 - Mailchimp, which is used for sending out promotional emails.
