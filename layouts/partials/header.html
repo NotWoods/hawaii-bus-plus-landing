@@ -3,8 +3,6 @@
 
   <nav class="ml-auto text-right space-x-4 mt-4 sm:mt-0">
     <a class="opacity-70 hover:opacity-100" href="/pricing/">Pricing</a>
-    <a id="openApp" class="shadow transition-colors text-black bg-white hover:bg-gray-200 px-4 py-2" href="https://app.hawaiibusplus.com/auth/login">Login</a>
+    <a id="openApp" class="shadow transition-colors text-black bg-white hover:bg-gray-200 px-4 py-2" href="https://app.hawaiibusplus.com/">Open app</a>
   </nav>
 </header>
-{{ $buttonScript := resources.Get "js/openButton.js" | js.Build (dict "minify" true) }}
-<script src="{{ $buttonScript.RelPermalink }}" async></script>
